@@ -99,7 +99,7 @@ const Hero = () => {
     <div id="hero" className="flex flex-col relative w-full overflow-hidden font-sans">
 
       {/* ===== HERO SECTION ===== */}
-      <div ref={heroRef} className="relative w-full min-h-[92vh] flex items-center bg-brand-teal">
+      <div ref={heroRef} className="relative w-full min-h-[90vh] flex items-center bg-brand-dark">
 
         {/* Background Images - All stacked, only active one visible */}
         {heroSlides.map((s, idx) => (
@@ -117,11 +117,11 @@ const Hero = () => {
           </div>
         ))}
 
-        {/* Dark Green Gradient Overlay */}
+        {/* Dark Teal Gradient Overlay */}
         <div className="absolute inset-0 pointer-events-none z-[5]">
-          <div className="absolute top-0 left-0 w-full lg:w-[55%] h-full"
+          <div className="absolute top-0 left-0 w-full lg:w-[65%] h-full"
             style={{
-              background: 'linear-gradient(to right, #00715d 0%, #00715dee 40%, #00715daa 70%, transparent 100%)'
+              background: 'linear-gradient(to right, #091F1Bcc 0%, #091F1B99 45%, #091F1B55 75%, transparent 100%)'
             }}
           ></div>
         </div>
@@ -215,13 +215,13 @@ const Hero = () => {
 
             <div className="hero-btns flex flex-wrap gap-4 items-center">
               <Link href="#">
-                <a className="bg-brand-dark text-white font-bold text-sm py-4 px-8 rounded-md hover:bg-white hover:text-brand-dark transition-all flex items-center group shadow-xl">
+                <a className="border-2 border-white text-white font-bold text-sm py-4 px-8 rounded-full hover:bg-white hover:text-brand-dark transition-all flex items-center group shadow-xl">
                   Discover More
                   <ArrowUpRight size={15} className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </Link>
               <Link href="#">
-                <a className="bg-brand-yellow text-brand-dark font-bold text-sm py-4 px-8 rounded-md hover:bg-white transition-all flex items-center group shadow-xl">
+                <a className="bg-brand-yellow text-brand-dark font-bold text-sm py-4 px-8 rounded-full hover:brightness-95 transition-all flex items-center group shadow-xl">
                   Get A Quote
                   <ArrowUpRight size={15} className="ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
@@ -236,9 +236,8 @@ const Hero = () => {
             <button
               key={idx}
               onClick={() => { goTo(idx); if (autoplayRef.current) clearInterval(autoplayRef.current); }}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                idx === current ? 'bg-brand-yellow scale-125 w-8' : 'bg-white/50 hover:bg-white/80'
-              }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${idx === current ? 'bg-brand-yellow scale-125 w-8' : 'bg-white/50 hover:bg-white/80'
+                }`}
             />
           ))}
         </div>

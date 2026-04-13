@@ -121,8 +121,8 @@ const CampaignsFocus = () => {
 
                   {/* Raised / Goal */}
                   <div className="flex justify-between text-sm font-bold text-brand-dark mb-2">
-                    <span>Raised: <span className="text-brand-teal">&#8377;{c.raised.toLocaleString()}</span></span>
-                    <span>Goal: &#8377;{c.goal.toLocaleString()}</span>
+                    <span>Raised: <span className="text-brand-teal">&#8377;{c.raised.toLocaleString('en-US')}</span></span>
+                    <span>Goal: &#8377;{c.goal.toLocaleString('en-US')}</span>
                   </div>
 
                   {/* Progress Bar */}

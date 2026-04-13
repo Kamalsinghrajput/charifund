@@ -7,7 +7,7 @@ module.exports = {
         brand: {
           yellow: '#FFCA08',
           teal: '#00715D',
-          dark: '#023047',
+          dark: '#091F1B',
           gray: '#f7f7f7',
           text: '#666666'
         }
